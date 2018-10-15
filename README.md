@@ -1,4 +1,4 @@
-# 汽车行业用户观点主题及情感识别 baseline 63+  
+# 汽车行业用户观点主题及情感识别 baseline 62+  
 ## 基本思路：  
 一个 content 可能对应多个主题，每个主题有对应的情感值，10*3 分三十个标签，标签构建做法如下  
 ```
@@ -12,4 +12,4 @@ train_df['label'] = train_df['subject'].str.cat(train_df['sentiment_value'].asty
 **capsule 实现参考（照搬）**:  
 [capsule 实现][https://github.com/bojone/Capsule]  
 
-ps. 数据处理、模型设置都还比较粗糙，欢迎大家给我提改进建议。
+ps. 数据处理、模型设置都还比较粗糙，欢迎大家提改进建议。
