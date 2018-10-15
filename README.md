@@ -11,7 +11,5 @@ train_df['label'] = train_df['subject'].str.cat(train_df['sentiment_value'].asty
 [词向量][https://github.com/Embedding/Chinese-Word-Vectors]  
 **capsule 实现参考（照搬）**:  
 [capsule 实现][https://github.com/bojone/Capsule]  
-**停词**
+**停词**:  
 [停词][https://github.com/goto456/stopwords/blob/master/%E5%93%88%E5%B7%A5%E5%A4%A7%E5%81%9C%E7%94%A8%E8%AF%8D%E8%A1%A8.txt]
-
-ps. 数据处理、模型设置都还比较粗糙，欢迎大家提改进建议。
