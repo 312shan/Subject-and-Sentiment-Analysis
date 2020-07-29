@@ -23,15 +23,13 @@ embeddings_index = {}
 EMBEDDING_DIM = 300
 embfile = '../word_emb/sgns.baidubaike.bigram-char'
 with open(embfile, encoding='utf-8') as f:
+    _ = f.readline() # 忽略第一行统计信息
     for i, line in enumerate(f):
         values = line.split()
         words = values[:-EMBEDDING_DIM]
         word = ''.join(words)
-        try:
-            coefs = np.asarray(values[-EMBEDDING_DIM:], dtype='float32')
-            embeddings_index[word] = coefs
-        except:
-            pass
+        coefs = np.asarray(values[-EMBEDDING_DIM:], dtype='float32')
+        embeddings_index[word] = coefs
 print('Found %s word vectors.' % len(embeddings_index))
 
 train_df = pd.read_csv(train_file, encoding='utf-8')
