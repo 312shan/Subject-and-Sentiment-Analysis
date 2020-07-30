@@ -4,7 +4,7 @@ import pandas as pd
 from capsule import *
 import jieba
 
-# not enable in windows
+# 这个配置在 windows 中不可用
 # jieba.enable_parallel(4)
 
 K.clear_session()
